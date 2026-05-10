@@ -36,7 +36,7 @@ obj/
 
 # appsettings secrets
 appsettings.*.json
-!appsettings.json
+appsettings.json
 
 # =====================
 # Mongo / DB dumps
