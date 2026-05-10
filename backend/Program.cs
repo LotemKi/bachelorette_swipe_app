@@ -3,6 +3,7 @@ using backend_dotnet.Hubs;
 using backend_dotnet.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 var allowedOrigin = builder.Configuration["AllowedOrigin"];
@@ -30,5 +31,8 @@ var app = builder.Build();
 app.UseCors("FrontendPolicy");
 app.MapControllers();
 app.MapHub<GameHub>("/gamehub");
+
+var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
+app.Urls.Add($"http://*:{port}");
 
 app.Run();
