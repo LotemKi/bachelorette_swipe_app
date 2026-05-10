@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "http://localhost:3000",
-            "https://your-frontend.vercel.app"
+                "https://bachelorette-swipe-app.vercel.app"
         )
                       .AllowAnyHeader()
                       .AllowAnyMethod()
