@@ -76,6 +76,8 @@ export default function Room() {
             .finally(() => setLoadingProfiles(false));
     }, []);
 
+    console.log("API:", process.env.NEXT_PUBLIC_API);
+
     const onSwipe = (profileId, liked) => {
         if (!user) return;
 
