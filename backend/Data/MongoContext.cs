@@ -12,8 +12,8 @@ public class MongoContext
 
     public MongoContext(IConfiguration config)
     {
-        var client = new MongoClient(config["MongoDb:ConnectionString"]);
-        var database = client.GetDatabase(config["MongoDb:Database"]);
+        var client = new MongoClient(config["MONGO_CONNECTION_STRING"]);
+        var database = client.GetDatabase(config["MONGO_DATABASE"]);
 
         Users = database.GetCollection<User>("Users");
         Profiles = database.GetCollection<Profile>("Profiles");
