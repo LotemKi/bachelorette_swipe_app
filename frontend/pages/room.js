@@ -131,9 +131,7 @@ export default function Room() {
                     <div className="rounded-[32px] bg-white/95 border border-pink-100 p-6 shadow-2xl">
                         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                             <div className="text-right">
-                                <p className="text-sm uppercase tracking-[0.2em] text-pink-500">חדר</p>
-
-                                <h1 className="mt-2 text-4xl font-extrabold text-slate-900">
+                                <h1 className="mt-2 text-5xl font-extrabold text-pink-500">
                                     חדר {user.roomCode}
                                 </h1>
 
