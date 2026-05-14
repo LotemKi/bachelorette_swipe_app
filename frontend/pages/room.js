@@ -123,18 +123,31 @@ export default function Room() {
 
     if (showLeaderboard || currentIndex >= profiles.length) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-slate-100 px-4 py-8">
+            <div
+                dir="rtl"
+                className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-slate-100 px-4 py-8 text-right"
+            >
                 <div className="max-w-5xl mx-auto space-y-8">
                     <div className="rounded-[32px] bg-white/95 border border-pink-100 p-6 shadow-2xl">
                         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                            <div>
+                            <div className="text-right">
                                 <p className="text-sm uppercase tracking-[0.2em] text-pink-500">חדר</p>
-                                <h1 className="mt-2 text-4xl font-extrabold text-slate-900">חדר {user.roomCode}</h1>
-                                <p className="mt-2 text-sm text-slate-500">שלום {user.nickname}, זו הלוח הסיכום של החדר שלך.</p>
+
+                                <h1 className="mt-2 text-4xl font-extrabold text-slate-900">
+                                    חדר {user.roomCode}
+                                </h1>
+
+                                <p className="mt-2 text-sm text-slate-500">
+                                    שלום {user.nickname}, זו טבלת הסיכום של החדר שלך.
+                                </p>
                             </div>
-                            <div className="rounded-3xl bg-gradient-to-r from-pink-500 to-fuchsia-500 px-5 py-4 text-white shadow-xl">
+
+                            <div className="rounded-3xl bg-gradient-to-r from-pink-500 to-fuchsia-500 px-5 py-4 text-white shadow-xl text-right">
                                 <p className="text-sm uppercase opacity-90">מצב חי</p>
-                                <p className="mt-2 text-3xl font-semibold">{Object.values(leaderboard).reduce((sum, count) => sum + count, 0)} ❤️</p>
+
+                                <p className="mt-2 text-3xl font-semibold">
+                                    {Object.values(leaderboard).reduce((sum, count) => sum + count, 0)} ❤️
+                                </p>
                             </div>
                         </div>
                     </div>
